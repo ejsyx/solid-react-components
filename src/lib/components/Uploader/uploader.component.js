@@ -197,7 +197,7 @@ class Uploader extends Component<Props> {
     }
 
     if (event.dataTransfer.items) {
-      files = event.dataTransfer.files.map(file => file);
+      files = Array.from(event.dataTransfer.files).map(file => file);
     }
 
     if (this.props.onDrop) {
